@@ -1,6 +1,4 @@
-// modules/UserSchema.js
-
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
   username: {
@@ -17,9 +15,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // You can add more fields here as needed
+  
 });
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema)
 
-module.exports = User;
+module.exports = User
