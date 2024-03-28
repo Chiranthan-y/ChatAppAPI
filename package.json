@@ -2,9 +2,10 @@
   "name": "chat-app-api",
   "version": "1.0.0",
   "description": "API for ChatApp",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -13,6 +14,10 @@
   "author": "Chiranthan Y",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "http": "^0.0.1-security",
+    "mongoose": "^8.2.3",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.7.5"
   }
 }
