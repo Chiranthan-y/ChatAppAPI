@@ -1,6 +1,4 @@
-// controllers/authController.js
-
-const User = require('../modules/User'); // Assuming you have a User model
+const User = require('./../modules/User.schema'); // Assuming you have a User model
 const bcrypt = require('bcrypt');
 
 exports.register = async (req, res) => {

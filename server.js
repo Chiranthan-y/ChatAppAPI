@@ -4,6 +4,7 @@ const http = require('http')
 const socketIo = require('socket.io')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
+const bodyParser = require('body-parser')
 
 const authRoutes =  require('./routes/auth.route')
 
@@ -36,9 +37,10 @@ io.on('connection', (socket) => {
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
-app.use('/api/auth', authRoutes)
+app.use(bodyParser.json())
 
 // Express routes
+app.use('/api/auth', authRoutes)
 app.get('/', (req, res) => {
   res.send('Chat App API')
 })
